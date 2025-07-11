@@ -1,0 +1,33 @@
+21 or blackjack
+
+Inicio:
+	2 cartas para cada inclusive o dealer.
+	O dealer tem uma carta oculta.
+	Se o jogador tiver BLACKJACK e o dealer não o jogador ganha 1.5x da aposta inicial e sai da rodada.
+	Desistir:
+		Retorna 0.5x da aposta inicial e sai da partida.
+	Seguro:
+		Paga o valor da aposta e, se o dealer tiver BLACKJACK, retorna o valor e o seguro para o jogador e ele sai da rodada.
+	Por ultimo, o dealer verifica se possui BLACKJACK. Se sim, ele revela a carta oculta e a rodada termina.
+
+Meio da rodada:
+	Para cada jogador de cima para baixo as seguintes ações podem ser feitas até que estourem ou travem:
+		HIT:
+			Pede uma carta adicional.
+		STAND:
+			Trava a mão do jogador.
+		DOUBLE DOWN:
+			Dobra a aposta inicial e pede mais uma carta obrigatoriamente. Apos isto trava a mão.
+		SPLIT:
+			Caso as duas cartas inicias sejam uma par o jogador pode separadas em mãos diferentes. Cada mão possui aposta igual a aposta inicial e são jogadas individualmente.
+	
+Fim:
+	O dealer vira sua carta e pede cartas baseado em alguma regra até travar ou estourar.
+
+Regras:
+	PUSH:
+		Quando o jogador e o dealer tem um BLACKJACK
+	BUST:
+		Estourar. Ultrapassou 21.
+	Regra da jogada o dealer (Criada por mim):
+		Se a diferenca entre 21 e os pontos do dealer for menor ou igual que o valor da ultima carta a mostra então ele para
