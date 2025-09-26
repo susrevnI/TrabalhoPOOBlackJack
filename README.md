@@ -1,1 +1,1 @@
-# TrabalhoPOOBlackJack
+# Trabalho POO BlackJack com um baralho

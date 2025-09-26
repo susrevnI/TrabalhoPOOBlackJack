@@ -99,10 +99,18 @@ public class Jogo {
 		
 		printDealerPlusJogadores();
 		
-		System.out.print("[Proxima rodada]");
-		sc.nextLine();
+		char c;
+
+		do {
+			System.out.print("[Proxima rodada? s/n]: ");
+			c = sc.nextLine().charAt(0);
+		} while (c != 's' and c != 'n');
+
+		if (c == 's') {
+			return true;
+		}
 		
-		return true;
+		return false;
 	}
 	
 	public void printDealerPlusJogadores() {
